@@ -103,7 +103,21 @@
                     <p class="text-sm text-gray-400 mt-1">Royalty. No drama, just fire.</p>
                 </button>
                 
-                <!-- Card 5: View Map -->
+                <!-- NEW CARD: Weather Report -->
+                <button data-modal-target="weather-modal" class="info-card text-left bg-[#1a1a1a] p-4 rounded-xl border border-[var(--ember-orange)]/50 shadow-lg shadow-[var(--ember-orange)]/10 col-span-2 hover:border-[var(--ember-orange)] transition-all">
+                    <div class="flex items-center">
+                        <div class="bg-[var(--ember-orange)]/20 rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-[var(--ember-orange)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-2.666-5.43a4.5 4.5 0 00-8.166-2.613A4.5 4.5 0 002.25 15z" /></svg>
+                        </div>
+                        <div class="flex-grow text-left">
+                             <h3 class="font-semibold text-white">Weather Report</h3>
+                             <p class="text-sm text-gray-400">Evening Forecast: 79°F, Clear</p>
+                        </div>
+                         <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" /></svg>
+                    </div>
+                </button>
+
+                <!-- Other Cards -->
                 <button data-modal-target="map-modal" class="info-card text-left bg-[#1a1a1a] p-4 rounded-xl border border-[var(--ember-orange)]/50 shadow-lg shadow-[var(--ember-orange)]/10 col-span-1 hover:border-[var(--ember-orange)] transition-all">
                     <div class="flex flex-col items-center justify-center h-full">
                         <div class="bg-[var(--ember-orange)]/20 rounded-full w-10 h-10 flex items-center justify-center mb-3">
@@ -112,8 +126,6 @@
                         <h3 class="font-semibold text-white">View Map</h3>
                     </div>
                 </button>
-
-                <!-- Card 6: Get a Ride -->
                 <button data-modal-target="ride-modal" class="info-card text-left bg-[#1a1a1a] p-4 rounded-xl border border-[var(--ember-orange)]/50 shadow-lg shadow-[var(--ember-orange)]/10 col-span-1 hover:border-[var(--ember-orange)] transition-all">
                     <div class="flex flex-col items-center justify-center h-full">
                         <div class="bg-[var(--ember-orange)]/20 rounded-full w-10 h-10 flex items-center justify-center mb-3">
@@ -122,8 +134,6 @@
                         <h3 class="font-semibold text-white">Get a Ride</h3>
                     </div>
                 </button>
-
-                <!-- Card 7: Add to Calendar -->
                 <button data-modal-target="calendar-modal" class="info-card text-left bg-[#1a1a1a] p-4 rounded-xl border border-[var(--ember-orange)]/50 shadow-lg shadow-[var(--ember-orange)]/10 col-span-2 hover:border-[var(--ember-orange)] transition-all">
                     <div class="flex items-center">
                         <div class="bg-[var(--ember-orange)]/20 rounded-full w-10 h-10 flex items-center justify-center mr-4">
@@ -139,15 +149,14 @@
             </div>
         </main>
 
-        <!-- Footer / RSVP Form -->
-        <footer class="p-4 bg-[#1a1a1a] border-t border-[var(--ember-orange)]/50">
+        <!-- RSVP Form -->
+        <div class="p-4 bg-[#1a1a1a] border-t border-[var(--ember-orange)]/50">
             <form id="rsvpForm" name="rsvp" data-netlify="true">
                 <input type="hidden" name="form-name" value="rsvp" />
                 <h3 class="font-cinzel text-2xl font-bold text-white mb-3 text-center header-glow">Will You Attend?</h3>
                 <div class="space-y-3">
                     <input type="text" name="name" placeholder="Your Name" required class="w-full bg-black border border-[var(--ember-orange)]/50 text-white rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--ember-orange)]">
                     <input type="email" name="email" placeholder="Your Email" required class="w-full bg-black border border-[var(--ember-orange)]/50 text-white rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--ember-orange)]">
-                    <!-- PHONE NUMBER FIELD ADDED -->
                     <input type="tel" name="phone" placeholder="Phone Number" required class="w-full bg-black border border-[var(--ember-orange)]/50 text-white rounded-lg px-4 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[var(--ember-orange)]">
                 </div>
                  <div class="flex flex-wrap justify-center gap-2 my-4">
@@ -171,6 +180,14 @@
                 </button>
             </form>
              <div id="confirmationMessage" class="text-center mt-4 text-lg"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center p-4 bg-[#1a1a1a] border-t border-[var(--ember-orange)]/50">
+            <p class="text-xs text-gray-400 mb-2">For questions, please contact AJ at (123) 456-7890.</p>
+            <p class="text-xs text-gray-500">
+                Powered by <a href="https://www.prescreates.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-[var(--ember-gold)]">PresCreates</a>
+            </p>
         </footer>
     </div>
 
@@ -231,6 +248,20 @@
                 description: `<div class="map-container mt-4">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3472.937934250238!2d-98.40698712469406!3d29.48773667517658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8d7e00555555%3A0x954d232c286d393c!2sHorizons%20and%20More!5e0!3m2!1sen!2sus!4v1722212934149!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                              </div>`
+            },
+            'weather-modal': {
+                title: 'Event Forecast',
+                description: `<div class="text-center">
+                                <p class="text-gray-300">Evening of Aug 2nd, San Antonio, TX</p>
+                                <p class="text-4xl font-bold my-2">79°F</p>
+                                <p class="text-gray-400">Clear with periodic clouds</p>
+                                <div class="mt-4 text-left space-y-2">
+                                    <p><strong>High for the day:</strong> 99°F</p>
+                                    <p><strong>Chance of Rain:</strong> 25%</p>
+                                    <p><strong>Humidity:</strong> 57%</p>
+                                </div>
+                                <a href="https://www.google.com/search?q=weather+san+antonio+tx" target="_blank" class="block w-full text-center font-bold mt-4 bg-[var(--ember-orange)] text-black py-3 px-4 rounded-lg hover:bg-[var(--ember-gold)] transition-colors">View Full Forecast</a>
+                              </div>`
             }
         };
 
@@ -249,11 +280,7 @@
             modalTitle.textContent = data.title;
             modalDescription.innerHTML = data.description;
 
-            if (modalId === 'map-modal') {
-                modalContent.classList.add('modal-map');
-            } else {
-                modalContent.classList.remove('modal-map');
-            }
+            modalContent.classList.toggle('modal-map', modalId === 'map-modal');
 
             infoModal.classList.remove('opacity-0', 'pointer-events-none');
             modalContent.classList.remove('scale-95', 'opacity-0');
@@ -265,17 +292,12 @@
         }
 
         infoCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const modalId = card.getAttribute('data-modal-target');
-                openModal(modalId);
-            });
+            card.addEventListener('click', () => openModal(card.dataset.modalTarget));
         });
 
         modalCloseBtn.addEventListener('click', closeModal);
         infoModal.addEventListener('click', (e) => {
-            if (e.target === infoModal) {
-                closeModal();
-            }
+            if (e.target === infoModal) closeModal();
         });
 
         // --- Add to Calendar Logic ---
@@ -292,39 +314,46 @@
             function formatUTC(date) { return date.toISOString().replace(/-|:|\.\d{3}/g, ''); }
             function formatOutlook(date) { return date.toISOString().split('.')[0]; }
 
-            document.querySelector('[data-modal-target="calendar-modal"]').addEventListener('click', () => {
-                const googleLink = document.getElementById('google-calendar-link');
-                if(googleLink) {
-                     googleLink.href = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${formatUTC(event.startTime)}/${formatUTC(endTime)}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
-                }
+            const calendarCard = document.querySelector('[data-modal-target="calendar-modal"]');
+            if(calendarCard) {
+                calendarCard.addEventListener('click', () => {
+                    const googleLink = document.getElementById('google-calendar-link');
+                    if(googleLink) {
+                         googleLink.href = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${formatUTC(event.startTime)}/${formatUTC(endTime)}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
+                    }
 
-                const outlookLink = document.getElementById('outlook-calendar-link');
-                if(outlookLink) {
-                    outlookLink.href = `https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=${encodeURIComponent(event.title)}&startdt=${formatOutlook(event.startTime)}&enddt=${formatOutlook(endTime)}&body=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
-                }
+                    const outlookLink = document.getElementById('outlook-calendar-link');
+                    if(outlookLink) {
+                        outlookLink.href = `https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=${encodeURIComponent(event.title)}&startdt=${formatOutlook(event.startTime)}&enddt=${formatOutlook(endTime)}&body=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
+                    }
 
-                const icsLink = document.getElementById('ics-download-link');
-                if(icsLink) {
-                    const icsContent = [
-                        'BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VEVENT', 'URL:' + document.URL,
-                        'DTSTART:' + formatUTC(event.startTime), 'DTEND:' + formatUTC(endTime),
-                        'SUMMARY:' + event.title, 'DESCRIPTION:' + event.description, 'LOCATION:' + event.location,
-                        'END:VEVENT', 'END:VCALENDAR'
-                    ].join('\n');
-                    icsLink.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
-                }
-            });
+                    const icsLink = document.getElementById('ics-download-link');
+                    if(icsLink) {
+                        const icsContent = [
+                            'BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VEVENT', 'URL:' + document.URL,
+                            'DTSTART:' + formatUTC(event.startTime), 'DTEND:' + formatUTC(endTime),
+                            'SUMMARY:' + event.title, 'DESCRIPTION:' + event.description, 'LOCATION:' + event.location,
+                            'END:VEVENT', 'END:VCALENDAR'
+                        ].join('\n');
+                        icsLink.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+                    }
+                });
+            }
         });
 
         // --- RSVP Form Logic ---
         const rsvpForm = document.getElementById('rsvpForm');
         if (rsvpForm) {
+            const submitBtn = rsvpForm.querySelector('button[type="submit"]');
             const confirmationMessage = document.getElementById('confirmationMessage');
+            
             rsvpForm.addEventListener('submit', function(event) {
                 event.preventDefault();
                 const formData = new FormData(rsvpForm);
                 const name = formData.get('name');
                 
+                submitBtn.disabled = true;
+
                 fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -334,10 +363,19 @@
                     rsvpForm.style.display = 'none';
                     confirmationMessage.textContent = `Thank you, ${name}! Your RSVP has been received.`;
                     confirmationMessage.style.color = 'var(--ember-gold)';
+
+                    setTimeout(() => {
+                        confirmationMessage.textContent = '';
+                        rsvpForm.style.display = 'block';
+                        rsvpForm.reset();
+                        document.querySelectorAll('.radio-label.selected').forEach(l => l.classList.remove('selected'));
+                        submitBtn.disabled = false;
+                    }, 4000);
                 })
                 .catch(() => {
                     confirmationMessage.textContent = 'Oops! Something went wrong. Please try again.';
                     confirmationMessage.style.color = 'var(--ember-red)';
+                    submitBtn.disabled = false;
                 });
             });
         }
